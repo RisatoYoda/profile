@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+body {
+    font-size: 0.9rem;
+    color: #383e45;
+}
+
+img {
+    max-width: 100%;
+}
+.wrapper {
+    max-width: 960px;
+    text-align: center;
+    padding: 0 4%;
+}
+/* ヘッダー
+----------------------------------------- */
+/* #header {
+    padding: 0 20px;
+} */
+.logo {
+    width: 120px;
+    line-height: 1px;
+ }
+ /* ロゴ以外右寄せ */
+.logo-item {
+    margin-right: auto;
+}
+/* ナビゲーション */
+#header ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-top: 10px;
+    gap: 20px;
+ }
+
+ /* メイン画像 */
+#mainvisual img {
+    height: calc(100vh - 60px);/* ズーム*/
+    width: 100%;
+    object-fit: cover;
+}
+/* h2のデザイン */
+.section-title {
+    display: inline-block; /* 下線をテキスト(h2)と同じ幅に */
+    border-bottom: solid 1px;
+    margin: 60px 0;
+    font-size: 2rem;
+}
+/* aboutセクション */
+#about img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+#about .text {
+    text-align: left;
+}
+/* h3のデザイン */
+.content-title {
+    font-size: 1rem;
+}
+/* bicycleセクション */
+#bicycle ul {
+    display: flex;
+    flex-direction: column; 
+}
+#bicycle li {
+    width: 100%;
+    list-style: none;
+}
+/* copyright */
+.copyright {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.5rem;
+}
+
+
+ /* デスクトップ版
+ ----------------------------------- */
+@media (min-width: 1024px) {
+
+/* ヘッダー */
+
+/* 両端にスペースを作る */
+/* #header ul {
+    padding: 0 50px;
+} */
+.logo {
+    margin-left: 170px;
+ }
+#header ul {
+    margin-right: 120px;
+ }
+ /* aboutセクション */
+ /* 横並びに */
+#about .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#about img {
+    margin-right: 30px;
+}
+ /* bicycleセクション */
+#bicycle ul {
+    display: flex;
+    flex-direction: row; /*デスクトップ版では横並び */
+    justify-content: space-between; /* 横並びで間隔をあける */
+    margin-left: 50px;
+}
+#bicycle li {
+    width: 32%;
+    margin-bottom: 30px;
+}
+}
